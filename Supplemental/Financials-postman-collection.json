@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "6143f7d1-9723-496d-9d25-d08e7c0d22de",
+		"name": "Financials",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"sender\":\"Shane\",\r\n  \"recipient\":\"Brianna\",\r\n  \"transactionValue\":150.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{appUrl}}/api/transactions",
+					"host": [
+						"{{appUrl}}"
+					],
+					"path": [
+						"api",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{appUrl}}/api/transactions",
+					"host": [
+						"{{appUrl}}"
+					],
+					"path": [
+						"api",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transactions Total",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{appUrl}}/api/transactions/total",
+					"host": [
+						"{{appUrl}}"
+					],
+					"path": [
+						"api",
+						"transactions",
+						"total"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{appUrl}}/api/transactions/{{transactionId}}",
+					"host": [
+						"{{appUrl}}"
+					],
+					"path": [
+						"api",
+						"transactions",
+						"{{transactionId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Transaction",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transactionId\": 1,\r\n    \"sender\": \"Brianna\",\r\n    \"recipient\": \"Shane\",\r\n    \"transactionValue\": 200.00,\r\n    \"softDelete\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{appUrl}}/api/transactions/{{transactionId}}",
+					"host": [
+						"{{appUrl}}"
+					],
+					"path": [
+						"api",
+						"transactions",
+						"{{transactionId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Transaction",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{appUrl}}/api/transactions/{{transactionId}}",
+					"host": [
+						"{{appUrl}}"
+					],
+					"path": [
+						"api",
+						"transactions",
+						"{{transactionId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

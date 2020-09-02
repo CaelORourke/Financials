@@ -1,0 +1,19 @@
+{
+	"id": "2ba11166-1638-443e-af99-05df0ce62085",
+	"name": "Financials (localhost)",
+	"values": [
+		{
+			"key": "appUrl",
+			"value": "https://localhost:44360",
+			"enabled": true
+		},
+		{
+			"key": "transactionId",
+			"value": "1",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2020-09-02T21:59:40.519Z",
+	"_postman_exported_using": "Postman/7.31.1"
+}
