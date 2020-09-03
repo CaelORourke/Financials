@@ -71,7 +71,7 @@
     }
 ```
 
-* Run the `Financials` project and test the `api/financials` route with a GET request using Postman.
+* Run the `Financials` project and test the `api/Transactions` route with a GET request using Postman.
   * Explain that we are getting an empty array because there is no data yet.
   * Highlight the fact that this application is using an in-memory database so each time we stop and start again we'll lose any data that we have. For real-world applications we would use a persistent database instead.
 
@@ -89,8 +89,8 @@
     }
 ```
 
-* Run the `Financials` project and test the `api/financials` route with a POST request using Postman.
-  * Test the `api/financials` route with a GET request using Postman. We should now see the transaction we created in the response.
+* Run the `Financials` project and test the `api/Transactions` route with a POST request using Postman.
+  * Test the `api/Transactions` route with a GET request using Postman. We should now see the transaction we created in the response.
   * Real-world we would also want to test with bad data as well.
 
 * Create a method to update an existing transaction. Highlight the `[HttpPut]` attribute. This is telling ASP.NET Core that PUT requests will match this route. The `[HttpPut]` attribute also has an id in curly braces. ASP.NET Core will look for data after the `api/Transactions/` and place the value it finds in the id parameter. The `PutTransaction` method has paramters for both an id and a `Transaction` object. We've told ASP.NET Core to get the id parameter from the route and the body of the request will be used to populate the `transaction` parameter.
@@ -112,9 +112,9 @@
     }
 ```
 
-* Run the `Financials` project and test the `api/financials` route with a PUT request using Postman.
+* Run the `Financials` project and test the `api/Transactions` route with a PUT request using Postman.
   * Explain that we need to pass the id of the transaction we want to update as part of the route.
-  * Test the `api/financials` route with a GET request using Postman. We should now see the updated transaction included in the response.
+  * Test the `api/Transactions` route with a GET request using Postman. We should now see the updated transaction included in the response.
 
 * Create a method to delete a transaction. Highlight the `[HttpDelete]` attribute. This is telling ASP.NET Core that DELETE requests will match this route. The `[HttpDelete]` attribute has an id in curly braces just like the `[HttpPut]` attribute. The `DeleteTransaction` method will receive this id as a parameter.
   * Explain that to delete a transaction we just need its id.
@@ -143,8 +143,8 @@
     }
 ```
 
-* Run the `Financials` project and test the `api/financials` route with a DELETE request using Postman.
-  * Test the `api/financials` route with a GET request using Postman. The `deleted` transaction will still be included in the response but its `SoftDelete` property will be set to `true`.
+* Run the `Financials` project and test the `api/Transactions` route with a DELETE request using Postman.
+  * Test the `api/Transactions` route with a GET request using Postman. The `deleted` transaction will still be included in the response but its `SoftDelete` property will be set to `true`.
 
 * Create a method to get the total value of all transaction. Highlight the `[HttpGet]` attribute. We're passing a string value of "Total". This is telling ASP.NET Core that GET requests to `api/Transactions/Total` will match this route.
   * Explain that we're using LINQ to exclude soft deleted transactions and return the sum of the remaining transactions.
@@ -161,7 +161,7 @@
     }
 ```
 
-* Run the `Financials` project and test the `api/financials/total` route with a GET request using Postman.
+* Run the `Financials` project and test the `api/Transactions/total` route with a GET request using Postman.
 
 * Take time to answer any remaining questions before moving on.
 
